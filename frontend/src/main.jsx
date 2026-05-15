@@ -26,7 +26,8 @@ import "./styles.css";
 import heroImage from "./assets/photo.jpg";
 
 const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:8080/api/leads";
+  import.meta.env.VITE_API_URL ||
+  "https://enthusiastic-fulfillment-production.up.railway.app";
 
 const metrics = [
   { value: "3.8x", label: "Average lead lift" },
@@ -100,7 +101,7 @@ function App() {
     });
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(`${API_URL}/api/leads`, {
         method: "POST",
 
         headers: {
