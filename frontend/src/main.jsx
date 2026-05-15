@@ -25,9 +25,7 @@ import {
 import "./styles.css";
 import heroImage from "./assets/photo.jpg";
 
-const API_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://enthusiastic-fulfillment-production.up.railway.app";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const metrics = [
   { value: "3.8x", label: "Average lead lift" },
